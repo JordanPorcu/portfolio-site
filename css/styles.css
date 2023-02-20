@@ -69,7 +69,8 @@ body {
   box-shadow: 0 20px 50px rgba(0, 0, 0, .8);
   align-items: center;
   height: fit-content;
-  backdrop-filter: blur(10px);
+  background: rgba(246, 238, 218, 0.4);
+  z-index: 3;
 }
 
 .interpart {
@@ -276,11 +277,6 @@ header {
 .parcours-details-text {
   margin-top: 20px;
   font-size: 1em;
-}
-
-.intro {
-  text-transform: none;
-  font-size: 0.8em;
 }
 
 .parcours-domain {
@@ -639,10 +635,9 @@ header {
     transform: scale(0);
   }
 
-
-
   .navbar {
     width: 100%;
+    transform: scale(0.5);
   }
 
   .nav-ul {
@@ -650,11 +645,36 @@ header {
   }
 
   .nav-elem {
-    font-size: 0.6em;
+    font-size: 1em;
     margin: auto 5px;
   }
 
+  .projet,
+  .face1,
+  .face2,
+  .img-projet {
+    width: 250px;
+    height: 250px;
+  }
 
+  .face1,
+  .face2 * {
+    font-size: 0.6em
+  }
 
+  .face2 {
+    transform: translateY(-251px);
+  }
 
+  .coord {
+    transform: scale(1);
+  }
+
+  .qui-suis-je {
+    font-size: 1em;
+  }
+  
+  .desc-main-text {
+    font-size: 0.7em;
+  }
 }
