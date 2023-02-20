@@ -62,8 +62,7 @@ body {
   margin-top: 150px;
   margin-bottom: 50px;
   width: 90%;
-  max-width: 1400px;
-  min-width: 900px;
+  max-width: 1200px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -90,7 +89,6 @@ header {
   height: 100px;
   background-color: var(--dark);
   width: 100%;
-  min-width: 1024px;
   position: fixed;
   top: 0;
   display: flex;
@@ -102,7 +100,7 @@ header {
 }
 
 
-    /* LOGO */
+/* LOGO */
 
 .jpds-logo {
   display: flex;
@@ -131,7 +129,7 @@ header {
   margin: 0
 }
 
-    /* MENU */
+/* MENU */
 
 .navbar {
   height: 100%;
@@ -225,7 +223,6 @@ header {
   margin-bottom: 20px;
   height: 10%;
   min-height: 150px;
-  max-height: 200px;
 }
 
 .parcours-box {
@@ -234,13 +231,13 @@ header {
   margin-right: 10px;
   background-color: var(--dark);
   box-shadow: var(--dark-shadow);
+  border: 1px solid var(--dark)
 }
 
 .parcours-logo {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  border: 1px solid var(--dark)
+  object-fit: contain;
 }
 
 .parcours-frame .parcours-box {
@@ -248,7 +245,7 @@ header {
 }
 
 .parcours-details {
-  width: calc(100% - 220px);
+  width: 100%;
   margin-left: 10px;
   overflow: hidden;
   background-color: var(--light);
@@ -340,7 +337,7 @@ header {
 .five {
   grid-column: 4;
   grid-row: 3 / 5;
-  border: 1px solid var(--light);
+  border: 1px solid var(--dark);
   box-shadow: var(--dark-shadow);
   background-color: var(--light);
 }
@@ -545,7 +542,11 @@ header {
   flex-direction: row;
   justify-content: center;
   transform: scale(1.5);
-  margin: 10px 0;
+  margin: 10px;
+}
+
+.colaborate p {
+  text-align: center;
 }
 
 .coord * {
@@ -587,4 +588,73 @@ header {
 
 /* MOBILE */
 
+@media screen and (max-width:900px) {
+  .container {
+    max-width: 900px;
+  }
 
+  .parcours-box,
+  .parcours-box * {
+    opacity: 0;
+    position: absolute;
+    z-index: -2;
+  }
+
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+  }
+
+  .one {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .two {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .three {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  .four {
+    grid-column: 1;
+    grid-row: 4;
+  }
+
+  .five {
+    grid-column: 1;
+    grid-row: 5;
+  }
+
+  .jpds-logo {
+    opacity: 0;
+    position: absolute;
+    z-index: -10;
+    transform: scale(0);
+  }
+
+
+
+  .navbar {
+    width: 100%;
+  }
+
+  .nav-ul {
+    justify-content: center;
+  }
+
+  .nav-elem {
+    font-size: 0.6em;
+    margin: auto 5px;
+  }
+
+
+
+
+}
