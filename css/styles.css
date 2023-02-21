@@ -1,8 +1,8 @@
 /* GENERAL */
 
 :root {
-  --dark: #30333a;
-  --light: #f6eeda;
+  --dark: rgb(48, 51, 58);
+  --light: rgb(246, 238, 218);
   --dark-to-light: linear-gradient(45deg, var(--dark), var(--light));
   --light-to-dark: linear-gradient(45deg, var(--light), var(--dark));
   --dark-shadow: 0px 0px 10px var(--dark);
